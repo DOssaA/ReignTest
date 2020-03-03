@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DarioOssa.ReignAndroidTest</string>
+    <string name="failure_network_connection">No Internet Conection</string>
+    <string name="failure_server_error">A failure occured, try again</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="postSub">%1$s - %2$s</string>
+    <string name="info_deleted_post">The post was deleted!</string>
+    <string name="unable_to_load_post">Unable to load post details</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="mins_ago">%1$d m</string>
+    <string name="hours_ago">%1$d h</string>
+</resources>

@@ -1,0 +1,89 @@
+allprojects {
+  repositories {
+    google()
+    jcenter()
+  }
+}
+
+ext {
+  //Android libraries
+  appCompat_version = '1.0.0'
+  constraintLayout_version = '1.1.3'
+  lifecycle_version = '2.2.0'
+  arch_core_version = '2.1.0'
+  glide_version = '4.11.0'
+  room_version = '2.2.4'
+  browser_helper_version = '1.1.0'
+
+  //Third party libraries
+  kotlin_coroutines_version = '1.3.3'
+  dagger_version = '2.26'
+  javaxAnnotations_version = '1.0'
+  javaxInject_version = '1'
+  retrofit_version = '2.7.2'
+  okhttp_logging_interceptor_version = '4.4.0'
+
+  //Unit Testing
+  robolectric_version = '3.8'
+  junit_version = '4.12'
+  mockito_version = '1.4.0'
+  kluent_version = '1.14'
+
+  //Acceptance Testing
+  runner_version = '1.0.2-alpha1'
+  espresso_version = '3.0.2-alpha1'
+
+  //Development
+  leakCanaryVersion = '2.2'
+
+  mainApplication = [
+      kotlin:                     "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+      kotlinCoroutines:           "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines_version",
+      kotlinCoroutinesAndroid:    "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_coroutines_version",
+      appCompat:                  "androidx.appcompat:appcompat:$appCompat_version",
+      cardView:                   "androidx.cardview:cardview:$appCompat_version",
+      recyclerView:               "androidx.recyclerview:recyclerview:1.1.0",
+      design:                     "com.google.android.material:material:$appCompat_version",
+      constraintLayout:           "androidx.constraintlayout:constraintlayout:$constraintLayout_version",
+      androidAnnotations:         "androidx.annotation:annotation:$appCompat_version",
+      arch_core_runtime:          "androidx.arch.core:core-runtime:$arch_core_version",
+      arch_core_testing:          "androidx.arch.core:core-testing:$arch_core_version",
+      lifecycle_runtime:          "androidx.lifecycle:lifecycle-runtime:$lifecycle_version",
+      lifecycle_java8:            "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version",
+      lifecycle_compiler:         "androidx.lifecycle:lifecycle-compiler:$lifecycle_version",
+      lifecycle_viewmodel_ktx:    "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version",
+      lifecycle_livedata_ktx:     "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version",
+      glide:                      "com.github.bumptech.glide:glide:$glide_version",
+      daggerCompiler:             "com.google.dagger:dagger-compiler:$dagger_version",
+      dagger:                     "com.google.dagger:dagger:$dagger_version",
+      javaxAnnotation:            "javax.annotation:jsr250-api:$javaxAnnotations_version",
+      javaxInject:                "javax.inject:javax.inject:$javaxInject_version",
+      retrofit:                   "com.squareup.retrofit2:converter-gson:$retrofit_version",
+      room:                       "androidx.room:room-runtime:$room_version",
+      room_ktx:                   "androidx.room:room-ktx:$room_version",
+      roomAnnotation:             "androidx.room:room-compiler:$room_version",
+      browserHelper:              "com.google.androidbrowserhelper:androidbrowserhelper:$browser_helper_version",
+      okhttpLoggingInterceptor:   "com.squareup.okhttp3:logging-interceptor:$okhttp_logging_interceptor_version",
+  ]
+
+  unitTesting = [
+      kotlin:             "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+      kotlinTest:         "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version",
+      robolectric:        "org.robolectric:robolectric:$robolectric_version",
+      junit:              "junit:junit:$junit_version",
+      mockito:            "com.nhaarman:mockito-kotlin:$mockito_version",
+      kluent:             "org.amshove.kluent:kluent:$kluent_version",
+  ]
+
+  acceptanceTesting = [
+      testRunner:         "com.android.support.test:runner:$runner_version",
+      testRules:          "com.android.support.test:rules:$runner_version",
+      espressoCore:       "com.android.support.test.espresso:espresso-core:$espresso_version",
+      espressoIntents:    "com.android.support.test.espresso:espresso-intents:$espresso_version",
+      androidAnnotations: "com.android.support:support-annotations:$appCompat_version",
+  ]
+
+  development = [
+      leakCanary:         "com.squareup.leakcanary:leakcanary-android:${leakCanaryVersion}",
+  ]
+}
